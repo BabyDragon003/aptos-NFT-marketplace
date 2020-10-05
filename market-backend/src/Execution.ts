@@ -1,4 +1,3 @@
-import { Subject } from "rxjs";
 import { prismaClient } from "./config/libs";
 import { BuyEventConsumer, dispatch, ListEventConsumer } from "./consumers";
 import { StateFlow, State } from "./State";

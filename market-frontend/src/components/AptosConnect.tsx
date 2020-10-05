@@ -1,4 +1,3 @@
-import { useWallet } from "@manahippo/aptos-wallet-adapter";
 import { useContext } from "react";
 import { ModalContext } from "./ModalContext";
 import { WalletModal } from "./WalletModal";
