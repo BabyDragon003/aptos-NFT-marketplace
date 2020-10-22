@@ -8,16 +8,11 @@ export default function Dashboard() {
   const { account } = useWallet();
   const { tokens, loading } = useTokens(account);
   const router = useRouter();
-            <ListCard
-              key={i.toString()}
-              data={token}
-              onClick={() =>
-                router.push(
-                  `/make-offer?creator=${token.creator}&name=${token.name}&collection=${token.collection}&description=${token.description}&uri=${token.uri}`
-                )
-              }
-            />
-          ))}
+
+  return loading ? (
+    <Loading />
+  ) : !tokens.length ? (
+    <h2 className="text-2xl p-8">No NFTs owned</h2>
         </div>
       </div>
     </div>

@@ -13,7 +13,3 @@ export interface TokenData {
 
   /** Total number of this type of Token */
   supply: string;
-
-  /** URL for additional information / media */
-  uri: string;
-}

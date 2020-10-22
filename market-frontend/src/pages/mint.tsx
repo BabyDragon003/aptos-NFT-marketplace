@@ -8,6 +8,17 @@ import {
   walletClient,
 } from "../utils/aptos";
 
+export default function Mint() {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const { account, signAndSubmitTransaction } = useWallet();
+  const [base64image, setBase64image] = useState("");
+  const [formInput, updateFormInput] = useState<{
+    collection: string;
+    name: string;
+    description: string;
+    file: File | null;
+  }>({
     collection: "",
     name: "",
     description: "",
