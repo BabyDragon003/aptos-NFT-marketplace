@@ -13,16 +13,11 @@ export class ListEventConsumer implements Consumer<ListTokenEventData> {
     delete state.old;
     let newState = state;
     newState.old = { ...state };
-    const transactions = [];
-    const data = event.data as ListTokenEventData;
-    const tokenDataId = data.token_id.token_data_id;
-
-    const creator = tokenDataId.creator;
-    const propertyVersion = BigInt(data.token_id.property_version);
-    const collection = tokenDataId.collection;
-    const name = tokenDataId.name;
-    let token = await prismaClient.token.findUnique({
-      where: {
+    for (const event of events) {
+      const { success, state } = await this.consume(newState, event);
+      if (success) {
+        newState.listEventsExecutedSeqNum = state.listEventsExecutedSeqNum;
+      } else {
         propertyVersion_creator_collection_name: {
           propertyVersion,
           creator,
