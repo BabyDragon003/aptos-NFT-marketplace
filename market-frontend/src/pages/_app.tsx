@@ -3,12 +3,6 @@ import "../styles/loading.css";
 import { NavBar } from "../components/NavBar";
 import type { AppProps } from "next/app";
 import { useMemo, useState } from "react";
-import {
-  FewchaWalletAdapter,
-  PontemWalletAdapter,
-  MartianWalletAdapter,
-  WalletProvider,
-  AptosWalletAdapter,
 } from "@manahippo/aptos-wallet-adapter";
 import { ModalContext, ModalState } from "../components/ModalContext";
 function MyApp({ Component, pageProps }: AppProps) {

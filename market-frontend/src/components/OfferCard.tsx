@@ -3,12 +3,6 @@ import React from "react";
 import { Offer } from "../types";
 import { TooltipSection } from "./TooltipSection";
 
-type CardProps = { data: Offer; onClick: any };
-export function OfferCard({ data: offer, onClick }: CardProps) {
-  return (
-    <div className="card card-compact bg-slate-50 shadow-xl">
-      <Image
-        className="bg-neutral-200"
         src={offer.token.uri}
         height={500}
         width={500}

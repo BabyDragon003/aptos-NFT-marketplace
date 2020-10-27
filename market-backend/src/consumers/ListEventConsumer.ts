@@ -3,12 +3,6 @@ import { prismaClient, walletClient } from "../config/libs";
 import { State } from "../State";
 import { ListTokenEventData, Event } from "../types";
 import { TokenData } from "../types/structs/TokenData";
-import { Consumer, handleError } from "./Consumer";
-
-export class ListEventConsumer implements Consumer<ListTokenEventData> {
-  async consumeAll(
-    state: State,
-    events: Event<ListTokenEventData>[]
   ): Promise<State> {
     delete state.old;
     let newState = state;

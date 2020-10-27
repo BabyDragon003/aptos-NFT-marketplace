@@ -3,12 +3,6 @@ import { useRouter } from "next/router";
 import {
   MARKET_ADDRESS,
   MARKET_COINT_TYPE,
-  MARKET_NAME,
-} from "../config/constants";
-import { TokenCard } from "../components/TokenCard";
-import { Token } from "../types";
-import { useWallet } from "@manahippo/aptos-wallet-adapter";
-
 export default function MakeOffer() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
