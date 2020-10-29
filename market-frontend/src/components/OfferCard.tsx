@@ -13,22 +13,6 @@ export function OfferCard({ data: offer, onClick }: CardProps) {
         height={500}
         width={500}
         objectFit="contain"
-        alt="picture"
-      />
-      <div className="card-body bg-base-100">
-        <h2 className="card-title">{offer.token.name}</h2>
-        <TooltipSection text={offer.token.description} />
-        <div
-          style={{
-            textOverflow: "ellipsis",
-            overflow: "hidden",
-            display: "inline",
-            maxWidth: "10rem",
-          }}
-        >
-          {"creator: " + offer.token.creator}
-        </div>
-        <div
           style={{
             textOverflow: "ellipsis",
             overflow: "hidden",

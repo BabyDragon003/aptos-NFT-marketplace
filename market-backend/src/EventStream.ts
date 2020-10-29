@@ -8,4 +8,8 @@ export function eventStream<T>(): Subject<{
   state: State;
   events: Event<T>[];
 }> {
+  return new Subject<{ state: State; events: Event<T>[] }>();
 }
+
+export async function events<T>(eventField: string, seqNum: bigint) {
+  const events = await aptosClient.getEventsByEventHandle(
