@@ -13,6 +13,22 @@ export class NFTStorageClient {
 
   private async fileFromPath(file: string | File) {
     if (file instanceof File) return file;
+    const content = await fs.readFile(file);
+    const type = mime.getType(file)!;
+    return new File([content], path.basename(file), { type });
+  }
+
+  private convertGatewayURL(ipfsURL: string) {
+    if (ipfsURL.startsWith("ipfs:"))
+      return (
+        "https://nftstorage.link/ipfs/" +
+        new URL(ipfsURL).pathname.replace(/^\/\//, "")
+      );
+    return ipfsURL;
+  }
+
+  async upload(file: string | File, name: string, description: string) {
+    const image = await this.fileFromPath(file);
     return await this.nftStorage.store({ image, name, description });
   }
 
