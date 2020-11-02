@@ -1,4 +1,3 @@
-# Demo NFT marketplace
 
 <p align="center">
   <img src="pics/logo.svg" height=150></img>
