@@ -1,3 +1,4 @@
+import { Offer } from "../types";
 import { useOffers } from "../hooks";
 import { useRouter } from "next/router";
 import {
