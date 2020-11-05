@@ -3,3 +3,8 @@ export interface Token {
   creator: string;
   collection: string;
   name: string;
+  description: string;
+  uri: string;
+  maximum: number;
+  supply: number;
+}
