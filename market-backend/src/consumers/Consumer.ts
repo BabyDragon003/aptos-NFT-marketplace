@@ -23,6 +23,3 @@ export function handleError(e: any) {
     const msg = `${e.code}: ${JSON.stringify(e.meta)}`;
     console.error(msg);
   } else {
-    console.error(e);
-  }
-}
