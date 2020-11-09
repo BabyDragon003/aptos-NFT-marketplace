@@ -1,4 +1,3 @@
-import { PrismaClientKnownRequestError } from "@prisma/client/runtime";
 import { State } from "../State";
 import { Event } from "../types/events/event";
 
@@ -23,3 +22,6 @@ export function handleError(e: any) {
     const msg = `${e.code}: ${JSON.stringify(e.meta)}`;
     console.error(msg);
   } else {
+    console.error(e);
+  }
+}
