@@ -1,13 +1,8 @@
+module _1200_dollars_per_hour::marketplace{
     use std::signer;
     use std::string::String;
     use aptos_framework::guid;
     use aptos_framework::coin;
-    use aptos_framework::account;
-    use aptos_framework::timestamp;
-    use aptos_std::event::{Self, EventHandle};    
-    use aptos_std::table::{Self, Table};
-    use aptos_token::token;
-    use aptos_token::token_coin_swap::{ list_token_for_swap, exchange_coin_for_token };
 
     const ESELLER_CAN_NOT_BE_BUYER: u64 = 1;
     const FEE_DENOMINATOR: u64 = 10000;
