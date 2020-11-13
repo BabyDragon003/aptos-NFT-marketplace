@@ -3,6 +3,12 @@ import * as fs from "fs/promises";
 import mime from "mime";
 import path from "path";
 import axios from "axios";
+import { NFT_STORAGE_KEY } from "../config/constants";
+
+export class NFTStorageClient {
+  private nftStorage: NFTStorage;
+  constructor(token: string) {
+    this.nftStorage = new NFTStorage({ token });
   }
 
   private async fileFromPath(file: string | File) {
