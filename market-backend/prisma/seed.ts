@@ -13,12 +13,3 @@ async function main() {
       buyEventsExecutedSeqNum: -1n,
     },
   });
-  console.log(result);
-}
-
-main()
-  .then(() => process.exit(0))
-  .catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });

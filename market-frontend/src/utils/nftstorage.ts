@@ -8,16 +8,11 @@ import { NFT_STORAGE_KEY } from "../config/constants";
 export class NFTStorageClient {
   private nftStorage: NFTStorage;
   constructor(token: string) {
-    if (ipfsURL.startsWith("ipfs:"))
-      return (
-        "https://nftstorage.link/ipfs/" +
-        new URL(ipfsURL).pathname.replace(/^\/\//, "")
-      );
-    return ipfsURL;
+    this.nftStorage = new NFTStorage({ token });
   }
 
-  async upload(file: string | File, name: string, description: string) {
-    const image = await this.fileFromPath(file);
+  private async fileFromPath(file: string | File) {
+    if (file instanceof File) return file;
     return await this.nftStorage.store({ image, name, description });
   }
 
