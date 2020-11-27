@@ -13,6 +13,22 @@ const {
   NEXT_PUBLIC_MARKET_COIN_TYPE: COIN_TYPE,
   NEXT_PUBLIC_MARKET_NAME: MARKET_NAME,
   NEXT_PUBLIC_MARKET_FEE_NUMERATOR: FEE_NUMERATOR,
+  NEXT_PUBLIC_MARKET_INITIAL_FUND: INITIAL_FUND,
+} = process.env;
+
+async function main() {
+  const client = new WalletClient(APTOS_NODE_URL, APTOS_FAUCET_URL);
+  const account = new AptosAccount(
+    HexString.ensure(WALLET_PRIVATE_KEY).toUint8Array()
+  );
+  const payload = {
+    function: `${account.address()}::marketplace::create_market`,
+    type_arguments: [COIN_TYPE],
+    arguments: [
+      MARKET_NAME,
+      +FEE_NUMERATOR,
+      `${account.address()}`,
+      +INITIAL_FUND,
     ],
   };
   const transaction = await client.aptosClient.generateTransaction(
