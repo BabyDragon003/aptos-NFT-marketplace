@@ -1,4 +1,3 @@
-import { Token } from "./Token";
 
 export type Status = "ongoing" | "finished" | "revoked";
 

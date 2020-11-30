@@ -1,4 +1,3 @@
-type TooltipSectionProps = { text: string };
 export function TooltipSection({ text }: TooltipSectionProps) {
   return (
     <div className="tooltip" data-tip={text}>
