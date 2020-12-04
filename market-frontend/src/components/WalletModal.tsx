@@ -18,27 +18,6 @@ export function WalletModal() {
   }
 
   function modalBox(content: JSX.Element) {
-    return (
-      <>
-        <label
-          htmlFor="wallet-modal"
-          className={
-            modalState.walletModal
-              ? "modal modal-open cursor-point"
-              : "modal cursor-pointer"
-          }
-        >
-          <div className="modal-box">
-            <label
-              className="btn btn-sm btn-circle absolute right-2 top-2"
-              onClick={() =>
-                setModalState({ ...modalState, walletModal: false })
-              }
-            >
-              ✕
-            </label>
-            <div className="mt-6  flex flex-col">{content}</div>
-          </div>
         </label>
       </>
     );
