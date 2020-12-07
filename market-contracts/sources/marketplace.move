@@ -1,4 +1,3 @@
-module _1200_dollars_per_hour::marketplace{
     use std::signer;
     use std::string::String;
     use aptos_framework::guid;

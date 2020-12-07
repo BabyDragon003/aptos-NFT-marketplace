@@ -1,4 +1,3 @@
-export interface TokenData {
   /** Unique name within this creator's account for this Token's collection */
   collection: string;
 

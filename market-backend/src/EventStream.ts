@@ -1,4 +1,3 @@
-import { Subject } from "rxjs";
 import { MARKET_ADDRESS } from "./config/constants";
 import { aptosClient } from "./config/libs";
 import { State } from "./State";
