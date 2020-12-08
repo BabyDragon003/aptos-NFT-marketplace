@@ -1,13 +1,8 @@
+# Demo NFT marketplace
 
 <p align="center">
   <img src="pics/logo.svg" height=150></img>
 </p>
-
-A full stack demo NFT marketplace based on aptos devnet. Aiming for clean and cocise code that is easy to understand and also make some automations to speed up full stack development.
-
-## Tech stack
-
-- Lang: Move, Typescript
 - Frontend: [Next.js](https://nextjs.org/), [tailwindcss](https://tailwindcss.com), [daisyui](https://daisyui.com)
 - Backend: [Supabase](https://supabase.com), [Prisma](https://prisma.io), [Rxjs](https://rxjs.dev/)
 

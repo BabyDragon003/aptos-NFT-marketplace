@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 type NavItemProps = { href: string; title: string };
 export function NavItem({ href, title }: NavItemProps) {
