@@ -8,7 +8,3 @@ export interface Offer {
   buyer?: string;
   price: number;
   status: Status;
-  createAt: Date;
-  updateAt?: Date;
-  token: Token;
-}

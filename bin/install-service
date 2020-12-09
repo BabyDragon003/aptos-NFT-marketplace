@@ -3,6 +3,12 @@
 set -e
 
 APP_NAME=$1
+ENV_NAME=$2
+
+
+cd `dirname $0`/..
+app_home=`pwd`
+sudo_user=$SUDO_USER
 if [ $sudo_user = "" ]; then
     sudo_user=$USER
 fi
