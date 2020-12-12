@@ -18,6 +18,27 @@ const {
 async function main() {
   const client = new WalletClient(APTOS_NODE_URL, APTOS_FAUCET_URL);
   const account = new AptosAccount(
+    HexString.ensure(ARBITRAGER_PRIVATE_KEY).toUint8Array()
+  );
+  const payload = {
+    function: `${MARKET_ADDRESS}::marketplace::list_token`,
+    type_arguments: [COIN_TYPE],
+    arguments: [
+      MARKET_ADDRESS,
+      MARKET_NAME,
+      "0xa0153890d8a3c360bc1045b4a9566dcfade479c2a8d2122056186ddc8ad2e2bc",
+      "cybercat",
+      "cybercat",
+      "0",
+      "10",
+    ],
+  };
+  const transaction = await client.aptosClient.generateTransaction(
+    account.address(),
+    payload,
+    { gas_unit_price: 100 }
+  );
+  const tx = await client.signAndSubmitTransaction(account, transaction);
   const result = await client.aptosClient.waitForTransactionWithResult(tx, {
     checkSuccess: true,
   });
