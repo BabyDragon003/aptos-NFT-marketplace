@@ -1,4 +1,3 @@
-import { prismaClient } from "../config/libs";
 import { State } from "../State";
 import { BuyTokenEventData, Event } from "../types";
 import { Consumer, handleError } from "./Consumer";
