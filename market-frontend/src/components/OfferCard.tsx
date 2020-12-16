@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { Offer } from "../types";
 import { TooltipSection } from "./TooltipSection";

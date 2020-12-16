@@ -1,3 +1,4 @@
+import {
   AptosAccount,
   WalletClient,
   HexString,
@@ -7,17 +8,6 @@ env.config({ path: `.env.${process.env.NODE_ENV}.local` });
 
 const {
   NEXT_PUBLIC_APTOS_NODE_URL: APTOS_NODE_URL,
-  NEXT_PUBLIC_APTOS_FAUCET_URL: APTOS_FAUCET_URL,
-  NEXT_PUBLIC_ARBITRAGER_PRIVATE_KEY: ARBITRAGER_PRIVATE_KEY,
-  NEXT_PUBLIC_MARKET_COIN_TYPE: COIN_TYPE,
-  NEXT_PUBLIC_MARKET_ADDRESS: MARKET_ADDRESS,
-  NEXT_PUBLIC_MARKET_NAME: MARKET_NAME,
-} = process.env;
-
-async function main() {
-  const client = new WalletClient(APTOS_NODE_URL, APTOS_FAUCET_URL);
-  const account = new AptosAccount(
-    HexString.ensure(ARBITRAGER_PRIVATE_KEY).toUint8Array()
   );
   const payload = {
     function: `${MARKET_ADDRESS}::marketplace::list_token`,
