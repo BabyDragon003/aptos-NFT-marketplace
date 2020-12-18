@@ -19,27 +19,6 @@ CREATE TABLE "offers" (
     CONSTRAINT "offers_pkey" PRIMARY KEY ("id")
 );
 
--- CreateTable
-CREATE TABLE "tokens" (
-    "id" BIGSERIAL NOT NULL,
-    "propertyVersion" BIGINT NOT NULL,
-    "creator" TEXT NOT NULL,
-    "collection" TEXT NOT NULL,
-    "name" TEXT NOT NULL,
-    "uri" TEXT NOT NULL,
-    "description" TEXT NOT NULL,
-    "maximum" BIGINT NOT NULL,
-    "supply" BIGINT NOT NULL,
-
-    CONSTRAINT "tokens_pkey" PRIMARY KEY ("id")
-);
-
--- CreateTable
-CREATE TABLE "executions" (
-    "id" BIGSERIAL NOT NULL,
-    "listEventsExecutedSeqNum" BIGINT NOT NULL,
-    "buyEventsExecutedSeqNum" BIGINT NOT NULL,
-
     CONSTRAINT "executions_pkey" PRIMARY KEY ("id")
 );
 
