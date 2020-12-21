@@ -1,4 +1,3 @@
--- CreateEnum
 CREATE TYPE "Status" AS ENUM ('ongoing', 'revoked', 'finished');
 
 -- CreateTable

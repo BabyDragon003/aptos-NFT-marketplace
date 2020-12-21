@@ -1,4 +1,3 @@
-import { AccountKeys } from "@manahippo/aptos-wallet-adapter";
 import { useEffect, useState } from "react";
 import { Token } from "../types";
 import { walletClient } from "../utils/aptos";
