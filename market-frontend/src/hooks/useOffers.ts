@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Offer } from "../types";
 
 export function useOffers(): {

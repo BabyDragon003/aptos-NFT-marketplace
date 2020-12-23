@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { NavItem } from "./NavItem";
 import { AptosConnect } from "./AptosConnect";
 

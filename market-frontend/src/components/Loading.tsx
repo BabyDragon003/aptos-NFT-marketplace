@@ -1,3 +1,4 @@
+export function Loading() {
   return (
     <img
       src="/logo.svg"

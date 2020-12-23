@@ -1,3 +1,4 @@
+import { PrismaClientKnownRequestError } from "@prisma/client/runtime";
 import { State } from "../State";
 import { Event } from "../types/events/event";
 

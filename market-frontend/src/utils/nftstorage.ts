@@ -1,3 +1,4 @@
+import { NFTStorage } from "nft.storage";
 import * as fs from "fs/promises";
 import mime from "mime";
 import path from "path";

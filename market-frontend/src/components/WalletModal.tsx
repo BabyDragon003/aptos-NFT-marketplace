@@ -1,3 +1,4 @@
+import { useWallet, Wallet } from "@manahippo/aptos-wallet-adapter";
 import Image from "next/image";
 import { useContext } from "react";
 import { ModalContext } from "./ModalContext";

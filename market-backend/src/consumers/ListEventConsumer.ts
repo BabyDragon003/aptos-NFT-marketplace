@@ -1,3 +1,4 @@
+import { Execution } from "@prisma/client";
 import { prismaClient, walletClient } from "../config/libs";
 import { State } from "../State";
 import { ListTokenEventData, Event } from "../types";
